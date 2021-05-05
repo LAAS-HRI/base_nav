@@ -1,0 +1,15 @@
+<launch>
+
+<include file="$(find pr2_2dnav)/launch/pr2_2dnav.launch"/>
+
+<param name="/move_base_node/global_costmap/observation_sources" value="base_scan_marking base_scan"/>
+
+<param name="/move_base_node/global_costmap/observation_sources" value="base_scan_marking base_scan"/>
+
+<param name="/move_base_node/local_costmap/obstacle_layer/observation_sources" value="base_scan_marking base_scan"/>
+
+<param name="/move_base_node/global_costmap/obstacle_layer/observation_sources" value="base_scan_marking base_scan"/>
+
+<node name="map_server" pkg="map_server" type="map_server" respawn="false" output="screen" args="/home/yriou/map/adream_RDC_complet.yaml"/>
+
+</launch>

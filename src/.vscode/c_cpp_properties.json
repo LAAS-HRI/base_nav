@@ -1,0 +1,47 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/yriou/PR2/director_task/ws_dt/devel/include/**",
+        "/home/yriou/PR2/ws_dual_arm_pr2_clean/devel/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/devel/include/**",
+        "/home/yriou/PR2/test_catkin_ws/devel/include/**",
+        "/home/yriou/PR2/anomalieMoveit/ws_debug_moveit/devel/include/**",
+        "/opt/ros/kinetic/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/ar_track_alvar/ar_track_alvar/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/moveit/moveit_planners/chomp/chomp_motion_planner/include/**",
+        "/home/yriou/PR2/ws_dual_arm_pr2_clean/src/moveit_dual_arm_planning/dual_arm_constraint_sampler/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/geometric_shapes/include/**",
+        "/home/yriou/PR2/ws_dual_arm_pr2_clean/src/measure_tools/include/**",
+        "/home/yriou/PR2/ws_dual_arm_pr2_clean/src/moveit_dual_arm_planning/move_group_x/include/**",
+        "/home/yriou/PR2/ws_dual_arm_pr2_clean/src/moveit_dual_arm_planning/moveit_ompl_dual_arm_planning_context/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/moveit/moveit_planners/chomp/chomp_interface/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/moveit/moveit_ros/benchmarks/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/moveit/moveit_plugins/moveit_ros_control_interface/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/moveit/moveit_ros/move_group/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/moveit/moveit_ros/occupancy_map_monitor/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/moveit/moveit_ros/robot_interaction/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/moveit/moveit_ros/moveit_servo/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/moveit/moveit_setup_assistant/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/moveit/moveit_plugins/moveit_simple_controller_manager/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/moveit_task_constructor/core/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/moveit_task_constructor/demo/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/ontologenius/include/**",
+        "/home/yriou/PR2/ws_dual_arm_pr2_clean/src/planners_visual_tools/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/pr2_head_manager/include/**",
+        "/home/yriou/PR2/director_task/ws_dt/src/pr2_mtc/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/resource_management/resource_management/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/resource_management/resource_synchronizer/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/rosparam_shortcuts/include/**",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/src/moveit_task_constructor/rviz_marker_tools/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

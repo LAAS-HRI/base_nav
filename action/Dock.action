@@ -1,0 +1,12 @@
+geometry_msgs/PoseStamped targetPose
+---
+int32 SUCCESS = 0
+int32 NO_MAP_TO_FOOTPRINT_TRANSFORM = -1
+int32 PREEMPTED = -2
+
+
+int32 error_code
+time action_end
+---
+float32 distance_to_goal
+time action_start

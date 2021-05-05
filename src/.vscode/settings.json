@@ -1,0 +1,10 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/yriou/PR2/director_task/ws_dt/devel/lib/python2.7/dist-packages",
+        "/home/yriou/PR2/ws_dual_arm_pr2_clean/devel/lib/python2.7/dist-packages",
+        "/home/yriou/PR2/director_task/ws_ros_pkg/devel/lib/python2.7/dist-packages",
+        "/home/yriou/PR2/test_catkin_ws/devel/lib/python2.7/dist-packages",
+        "/home/yriou/PR2/anomalieMoveit/ws_debug_moveit/devel/lib/python2.7/dist-packages",
+        "/opt/ros/kinetic/lib/python2.7/dist-packages"
+    ]
+}
