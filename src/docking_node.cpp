@@ -140,13 +140,13 @@ public:
         cmdVelPub_.publish(cmdVel);
 
         asResult.error_code = asResult.SUCCESS;
-        dockActionServer_.setSucceeded(asResult);\
+        dockActionServer_.setSucceeded(asResult);
     }
 
     void getParams(Params& params)
     {
         double controlPeriod;
-        nh_.param("goal_tolerance_dist", params.goalTolerance_dist, 0.2);
+        nh_.param("goal_tolerance_dist", params.goalTolerance_dist, 0.05);
         nh_.param("goal_tolerance_ang", params.goalTolerance_ang, 0.02);
         params.goalTolerance_dist *= params.goalTolerance_dist;
         nh_.param("max_speed", params.maxSpeed, 0.2);
