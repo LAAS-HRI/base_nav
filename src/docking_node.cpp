@@ -28,7 +28,7 @@ public:
 
     Docking(ros::NodeHandle& nh): nh_(nh), dockActionServer_(nh, "dock", boost::bind(&Docking::onDock, this, _1), false){
         tfListener_ = std::make_shared<tf2_ros::TransformListener>(tfBuffer_);
-        cmdVelPub_ = nh_.advertise<geometry_msgs::Twist>("/navigation/cmd_vel", 10, true);
+        cmdVelPub_ = nh_.advertise<geometry_msgs::Twist>("/base_controller/command", 100, true);
         dockActionServer_.start();
     }
 
