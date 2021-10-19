@@ -38,7 +38,7 @@ public:
         getParams(params);
         
         base_nav::DockResult asResult;
-        if (!tfBuffer_.canTransform("map", "base_footprint", timeZero))
+        if (!tfBuffer_.canTransform("map","base_footprint", timeZero))
         {
             ROS_WARN_STREAM_NAMED("Docking", "Can't transform base_footprint frame in map frame. Aborting action.");
             asResult.error_code = asResult.NO_MAP_TO_FOOTPRINT_TRANSFORM;
@@ -55,11 +55,17 @@ public:
         //  Handle X/Y position correction
         //============================================================
 
-        geometry_msgs::TransformStamped map2footprintMsg = tfBuffer_.lookupTransform("map", "base_footprint", timeZero);
+        geometry_msgs::TransformStamped map2footprintMsg = tfBuffer_.lookupTransform("map","base_footprint", timeZero);
         tf2::Transform map2footprint;
         tf2::fromMsg(map2footprintMsg.transform, map2footprint);
 
-        double error_dist = tf2::tf2Distance2(poseTf.getOrigin(), map2footprint.getOrigin());
+        geometry_msgs::TransformStamped pose2mapMsg = tfBuffer_.lookupTransform("map", goal->targetPose.header.frame_id, timeZero);
+        tf2::Transform pose2map;
+        tf2::fromMsg(pose2mapMsg.transform, pose2map);
+
+        poseTf = pose2map * poseTf;
+
+	double error_dist = tf2::tf2Distance2(poseTf.getOrigin(), map2footprint.getOrigin());
 
         double error_ang;
         double cmd_dist = 0.0, integral_dist;
@@ -83,7 +89,7 @@ public:
 
         while ((std::abs(error_dist) > params.goalTolerance_dist) || (std::abs(error_ang) > params.goalTolerance_ang) && ros::ok())
         {
-            map2footprintMsg = tfBuffer_.lookupTransform("map", "base_footprint", ros::Time(0.0));
+            map2footprintMsg = tfBuffer_.lookupTransform("map","base_footprint", ros::Time(0.0));
             tf2::fromMsg(map2footprintMsg.transform, map2footprint);
 
             footprint2pose = map2footprint.inverse() * poseTf;
@@ -96,6 +102,7 @@ public:
             error_ang = errorYaw;
 
             error_dist = std::pow(footprint2pose.getOrigin().getX(), 2) + std::pow(footprint2pose.getOrigin().getY(), 2);
+
             feedback.distance_to_goal = std::sqrt(error_dist);
 
             dockActionServer_.publishFeedback(feedback);
